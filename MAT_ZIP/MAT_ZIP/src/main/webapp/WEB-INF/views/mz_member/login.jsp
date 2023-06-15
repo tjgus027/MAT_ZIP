@@ -25,6 +25,9 @@
   <link href="${pageContext.request.contextPath}/resources/css/style.css" rel="stylesheet" />
   <!-- responsive style -->
   <link href="${pageContext.request.contextPath}/resources/css/responsive.css" rel="stylesheet" />
+  <!-- 비밀번호 아이콘 이미지 -->
+  <link rel="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+  
 <style type="text/css">
 body{
 	background-color: #343a40;
@@ -41,7 +44,25 @@ hr{
 	margin-right: auto;
 	margin-top: auto;
 }
+i {
+	color: #ffc107;
+}
 </style>
+<script type="text/javascript">
+$(document).ready(
+		function() {
+			$('.pw_i').on(
+					'click',
+					function() {
+						$('#password').toggleClass('active');
+						if ($('#password').hasClass('active')) {
+							$('#password').attr('type', 'text');
+						} else {
+							$('#password').attr('type', 'password');
+						}
+					});
+		}); //비밀번호 보기/숨기기 관련 메소드
+</script>
 </head>
 <body>
 	        <!-- header section strats -->
@@ -73,9 +94,14 @@ hr{
 			</div>
 
 			<div class="form-group">
-				<label for="usr">비밀번호</label> <input type="text"
-					class="form-control  pl-1r" id="password"
+				<label for="usr">비밀번호</label> 
+				<div class="pw_div" style="position: relative;">
+				<input type="password" class="form-control  pl-1r" id="password"
 					placeholder="비밀번호를 입력하세요." name="password">
+					<div style="padding-top: 0; position: absolute; top: 25%; right: 5%;">
+							<i class="fa fa-eye fa-lg pw_i" style="width: 20px; height: 100%"></i> 
+					</div>
+				</div>
 			</div>
 			<hr>
 			<div style="text-align: center;">
