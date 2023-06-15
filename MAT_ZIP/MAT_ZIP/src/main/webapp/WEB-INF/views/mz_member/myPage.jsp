@@ -388,7 +388,7 @@ body{
   
 <div class="member-Info-container2" style="margin-top: 30px;">
 <div style="margin-top: 20px;  height: 100%">
-<h1 class="myPage-margin-size" style="font-size: 40px;">DDO chelin of ${memberInfo.nickName}</h1>
+<h1 class="myPage-margin-size" style="font-size: 40px;">point list of ${memberInfo.nickName}</h1>
 <hr>
 	<div style="overflow: auto; height: 70%">
 	<span id="result1"></span>
